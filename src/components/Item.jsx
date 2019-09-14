@@ -39,7 +39,7 @@ class Item extends Component {
     return(
       <Container>
         <Row>
-          <Col>
+          <Col lg={4}>
             <Figure>
               <Figure.Image
                 width={171}
@@ -52,7 +52,7 @@ class Item extends Component {
               </Figure.Caption>
             </Figure>
           </Col>
-          <Col>
+          <Col lg={4}>
             <Row>
               <h3>Documents</h3>
               <ListGroup variant="flush">
@@ -74,9 +74,7 @@ class Item extends Component {
               </ListGroup>
             </Row>
             <Row>
-              <Row>
-                <h3>Team</h3>
-              </Row>
+              <h3>Team</h3>
               <Row>
               {
                 this.state.team.map( member => (
@@ -88,13 +86,15 @@ class Item extends Component {
                 ))
               }
               </Row>
-
-              <p>Add team members</p>
+              <Link to='/add-team-members'>
+                <Image style={{maxWidth:'20px'}} src={process.env.PUBLIC_URL +`Add.png`}/> {' '}
+                Add team members
+              </Link>
 
             </Row>
           </Col>
 
-          <Col>
+          <Col lg={4}>
             <Row>
               <Col>1 of 2</Col>
               <Col>2 of 2</Col>
