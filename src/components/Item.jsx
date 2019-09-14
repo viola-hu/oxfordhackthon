@@ -95,9 +95,21 @@ class Item extends Component {
           </Col>
 
           <Col lg={4}>
-            <Row>
-              <Col>1 of 2</Col>
-              <Col>2 of 2</Col>
+            <h3>Bids</h3>
+            <Row style={{textAlign: 'center'}}>
+              <Col style={{background:'turquoise', color:'white'}}>
+                <Image style={{maxWidth:'100%'}} src={process.env.PUBLIC_URL +`bestBid.png`}/>
+                $$$$
+
+                <h5>Best Offer</h5>
+              </Col>
+              <Col style={{background:'grey', color:'white'}}>
+                <Image style={{maxWidth:'100%'}} src={process.env.PUBLIC_URL +`averageBid.png`}/>
+                $$$$
+
+                <h5>Average Bid</h5>
+              </Col>
+
             </Row>
             <Row>
               bidder's list
