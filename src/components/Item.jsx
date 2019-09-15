@@ -70,18 +70,21 @@ class Item extends Component {
       <Container>
         <Row>
           <Col lg={4}>
+            <Row style={{margin: '.5rem .5rem .5rem 0'}}>
             <Link to={`/home}`}>
               <Image style={{maxWidth:'20px'}} src={process.env.PUBLIC_URL +`Vector3.png`}/> {' '}
               George Street Project
             </Link>
+            </Row>
+            <Row>
             <Figure>
               <Figure.Image
-                style={{maxWidth: '100%'}}
+                style={{maxWidth: '100%', borderRadius: '20px'}}
                 alt="171x180"
                 src="https://www.screed.com.sg/wp-content/uploads/2018/07/IDETTA-Slice-of-Cake-Slim-Ceiling-Lamp.jpg"
               />
-              <Figure.Caption>
-                <ListGroup variant="flush">
+            <Figure.Caption>
+                <ListGroup variant="flush" >
                   <ListGroup.Item>
                     <h5 style={{color:'black'}}>DUO Surface Flushmount</h5>
                     <p style={{color:'black'}}>Budget $600</p>
@@ -129,9 +132,10 @@ class Item extends Component {
                 </ListGroup>
               </Figure.Caption>
             </Figure>
+            </Row>
           </Col>
-          <Col lg={4}>
-            <Row>
+          <Col lg={3} style={{margin:'1rem'}}>
+            <Row style={{background:'white', borderRadius:"20px", margin:'1rem auto'}}>
               <h3>Documents</h3>
               <ListGroup variant="flush">
                   {
@@ -157,7 +161,7 @@ class Item extends Component {
                 </ListGroup.Item>
               </ListGroup>
             </Row>
-            <Row>
+            <Row style={{background:'white', borderRadius:"20px"}}>
               <h3>Team</h3>
               <Row>
               {
@@ -178,9 +182,9 @@ class Item extends Component {
             </Row>
           </Col>
 
-          <Col lg={4}>
+          <Col lg={4} style={{background:'black', color:'white', borderRadius:"20px", margin:'1rem auto'}}>
             <h3>Bids</h3>
-            <Row style={{textAlign: 'center'}}>
+            <Row style={{textAlign: 'center', padding:'1rem', borderRadius:'20px'}}>
               <Col style={{background:'turquoise', color:'white'}}>
                 <Image style={{maxWidth:'70%'}} src={process.env.PUBLIC_URL +`bestBid.png`}/>
                 <h3>$870,000</h3>
@@ -195,8 +199,8 @@ class Item extends Component {
             <Row>
               {
                 this.state.bidders.map( b => (
-                  <ListGroup variant="flush" style={{width:'100%'}}>
-                    <ListGroup.Item>
+                  <ListGroup variant="flush" style={{width:'100%' }}>
+                    <ListGroup.Item style={{background:'black', color:'white'}}>
                       <Row >
                       <Col lg={8}>
                         <Link to={'/supplier'}>
