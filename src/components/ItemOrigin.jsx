@@ -63,8 +63,7 @@ class Item extends Component {
 
 
   render(){
-    let averageBid = (1000000.00 + 2000000.00 + 1500000.00 + 870000.00 + 650000.00 + 1000000.00) / 6;
-    let yellowStars = new Array(5).fill(process.env.PUBLIC_URL +`Vector3.png`);
+    let averageBid = (1000000.00 + 2000000.00 + 1500000.00 + 870000.00 + 650000.00 + 1000000.00) / 6
 
     return(
       <Container>
@@ -215,6 +214,8 @@ class Item extends Component {
           </Col>
         </Row>
       </Container>
+
+
     );
   }
 }
