@@ -3206,13 +3206,21 @@ class Home extends Component {
             <div>
                 <h1>Hello to the welcome page</h1>
                 <div className='items'>
+                    <div className='contents'>
+                    <div className='items-header'>
+                        <h3>578 Items</h3>
+                        <input type='text' placeholder='Search items'/>
+                        <img className='items-img' style={{maxWidth:'70%'}} src={process.env.PUBLIC_URL +`search.png`}/>
+                        
+                    </div>
                 {
                     this.state['Capacitors'].bidders.length > 0
                     ?
 
                     
-                    Object.keys(this.state).map(p => 
+                    Object.keys(this.state).map((p, index) => 
                     <div className='items-container'>
+
                         <Link to={{
                             pathname: "/item",
                             state: {
@@ -3220,9 +3228,9 @@ class Home extends Component {
                             }
                             }}>
                         <button onClick={this.handleClick}>
-                        
+                        <div>{`${index + 1}.`}</div>
                         <div>{p}</div>
-                        <div>{this.state[p].info.budget}</div>
+                        <div>{`$${this.state[p].info.budget}`}</div>
                         {/* {console.log(this.state[p])}
                         {console.log(this.state[p].info.budget)} */}
                         {/* {this.state[p].map(m => 
@@ -3241,6 +3249,7 @@ class Home extends Component {
                     :
                     <div>Loading...</div>
                 }
+                </div>
                 </div>
             </div>
         )
