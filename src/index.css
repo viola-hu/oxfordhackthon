@@ -14,7 +14,8 @@ code {
 
 
 .nav-image{
-  background: url(./images/skyscraper02.jpg);
+  /* background: url(./images/skyscraper02.jpg); */
+  background-color: black;
   background-size: cover;
   /* background: blue; */
   color: white;
