@@ -120,7 +120,14 @@ class Item extends Component {
 
             </Row>
             <Row>
-              bidder's list
+              {Object.keys(this.state.bidders).map( b => 
+                // <div>{this.state.bidders[b]}</div>
+                // {console.log(this.state.bidders[b])}
+                // {console.log(Object.keys(this.state.bidders[b]))}
+                <div>
+                <div>{Object.keys(this.state.bidders[b])}</div>
+                </div>
+                )}
             </Row>
           </Col>
         </Row>

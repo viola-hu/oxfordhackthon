@@ -17,9 +17,9 @@ class Supplier extends Component {
 
     this.state = {
       'rating': '4',
-      'description': 'We are a new lighting supplier',
+      'description': "Australia's largest supplier of commercial grade solar panels",
       'certification': 'Cert IV',
-      'bid': '$100,000.00',
+      'bid': '$1,000,000.00',
       'completed': 140
 
     };
