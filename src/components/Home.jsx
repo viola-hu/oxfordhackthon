@@ -3204,7 +3204,6 @@ class Home extends Component {
     render() {
         return(
             <div>
-                <h1>Hello to the welcome page</h1>
                 <div className='items'>
                     <div className='contents'>
                     <div className='items-header'>
@@ -3228,9 +3227,11 @@ class Home extends Component {
                             }
                             }}>
                         <button onClick={this.handleClick}>
-                        <div>{`${index + 1}.`}</div>
-                        <div>{p}</div>
-                        <div>{`$${this.state[p].info.budget}`}</div>
+                        {/* <div className='button-right'> */}
+                        <div className='bidder'>{`${index + 1}.`}</div>
+                        <div className='bidder'>{p}</div>
+                        {/* </div> */}
+                        <div className='budget' >{`Budget: $${this.state[p].info.budget}`}</div>
                         {/* {console.log(this.state[p])}
                         {console.log(this.state[p].info.budget)} */}
                         {/* {this.state[p].map(m => 
