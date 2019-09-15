@@ -210,7 +210,6 @@ class Item extends Component {
                   </ListGroup>
                 ))
               }
-
             </Row>
           </Col>
         </Row>
