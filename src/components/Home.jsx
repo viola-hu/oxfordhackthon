@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import './home.css'
 
 
 class Home extends Component {
@@ -3203,14 +3204,12 @@ class Home extends Component {
     render() {
         return(
             <div>
+                <h1>Hello to the welcome page</h1>
+                <div className='items'>
                 {
                     this.state['Capacitors'].bidders.length > 0
                     ?
-                    
-                    // for (const [key, value] of Object.entries(this.state)) {
-                    //     // console.log(key, value);
-                    //     <div>{key}</div>
-                    //   }
+
                     
                     Object.keys(this.state).map(p => 
                     <div className='items-container'>
@@ -3242,6 +3241,7 @@ class Home extends Component {
                     :
                     <div>Loading...</div>
                 }
+                </div>
             </div>
         )
     }

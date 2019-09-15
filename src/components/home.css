@@ -1,0 +1,16 @@
+
+
+body {
+    background-color: #f4f4f2;
+}
+
+.items {
+    width: 50vw;
+    background-color: white;
+    /* padding-left: 20vw; */
+    border-radius: 20px;
+    margin: auto;
+    -webkit-box-shadow: 11px 4px 20px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 11px 4px 20px 0px rgba(0,0,0,0.75);
+box-shadow: 11px 4px 20px 0px rgba(0,0,0,0.75);
+}
