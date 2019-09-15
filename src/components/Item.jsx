@@ -16,7 +16,9 @@ class Item extends Component {
     super(props);
 
     this.state = {
-      constructionData: {},
+      constructionData: {
+
+      },
       documents:['Floorplan', 'Blueprint'],
       team:[{
         name: 'Jane',
@@ -40,15 +42,63 @@ class Item extends Component {
       <Container>
         <Row>
           <Col lg={4}>
+            <Link to={`/home}`}>
+              <Image style={{maxWidth:'20px'}} src={process.env.PUBLIC_URL +`Vector3.png`}/> {' '}
+              George Street Project
+            </Link>
             <Figure>
               <Figure.Image
-                width={171}
-                height={180}
+                style={{maxWidth: '100%'}}
                 alt="171x180"
                 src="https://www.screed.com.sg/wp-content/uploads/2018/07/IDETTA-Slice-of-Cake-Slim-Ceiling-Lamp.jpg"
               />
               <Figure.Caption>
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
+                <ListGroup variant="flush">
+                  <ListGroup.Item>
+                    <h5 style={{color:'black'}}>DUO Surface Flushmount</h5>
+                    <p style={{color:'black'}}>Budget $600</p>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <Row>
+                    <Col lg={7}>
+                    Item type: Light fixture
+                    </Col>
+                    <Col lg={5}>
+                    Remove | Edit
+                    </Col>
+                    </Row>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <Row>
+                    <Col lg={7}>
+                    Market value: $600
+                    </Col>
+                    <Col lg={5}>
+                    Remove | Edit
+                    </Col>
+                    </Row>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <Row>
+                    <Col lg={7}>
+                    Material: Lorem ipsum
+                    </Col>
+                    <Col lg={5}>
+                    Remove | Edit
+                    </Col>
+                    </Row>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <Row>
+                    <Col lg={7}>
+                    Deadline: February 2020
+                    </Col>
+                    <Col lg={5}>
+                    Remove | Edit
+                    </Col>
+                    </Row>
+                  </ListGroup.Item>
+                </ListGroup>
               </Figure.Caption>
             </Figure>
           </Col>
@@ -59,8 +109,14 @@ class Item extends Component {
                   {
                     this.state.documents.map( doc => (
                       <ListGroup.Item>
+                      <Row>
+                        <Col lg={4}>
                         {doc}
+                        </Col>
+                        <Col lg={8}>
                         <Link to="/remove">Remove</Link> | <Link to="/download">Download</Link>
+                        </Col>
+                      </Row>
                       </ListGroup.Item>
 
                     ))
