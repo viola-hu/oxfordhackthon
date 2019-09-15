@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3b0031c6.chunk.css",
+    "main.js": "/static/js/main.cc2aa76c.chunk.js",
+    "main.js.map": "/static/js/main.cc2aa76c.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.9baa0e95.js",
+    "runtime~main.js.map": "/static/js/runtime~main.9baa0e95.js.map",
+    "static/js/2.c918cf06.chunk.js": "/static/js/2.c918cf06.chunk.js",
+    "static/js/2.c918cf06.chunk.js.map": "/static/js/2.c918cf06.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a60032d7e67990e62e81aff0f9f9ecc1.js": "/precache-manifest.a60032d7e67990e62e81aff0f9f9ecc1.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.3b0031c6.chunk.css.map": "/static/css/main.3b0031c6.chunk.css.map",
+    "static/media/index.css": "/static/media/leftLightening.0cbd653d.png"
+  }
+}
