@@ -30,8 +30,16 @@ class Item extends Component {
         name: 'Jim',
         job: 'Project Manager',
         image: 'https://imgur.com/I80W1Q0.png'
-      }]
-    };
+      }],
+      "bidders": [
+        { "Australian Solar Co.": { "bid": '$1,000,000.00', "rating": 4 } },
+        { "Summer of Solar Inc.": { "bid": '$2,000,000.00', "rating": 2 } },
+        { "Solar Boy Pty Ltd": { "bid": '$1,500,000.00', "rating": 5 } },
+        { "XYZ Solar": { "bid": '$870,000.00', "rating": 3 } },
+        { "Simon's Solar Pty Ltd": { "bid": '$650,000.00', "rating": 1 } },
+        { "Awesome Solar Company": { "bid": '$1,000,000.00', "rating": 1 } }
+      ]
+    }
   }
 
 
