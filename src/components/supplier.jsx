@@ -32,20 +32,20 @@ class Supplier extends Component {
 
   render(){
     return(
-      <Container>
+      <Container style={{margin:'1rem auto'}}>
         <Row>
           <Col className="leftLighting" lg={4}></Col>
-          <Col lg={8} style={{background:'white'}}>
-            <Row>
+          <Col lg={8} style={{background:'white', borderRadius: '20px'}}>
+            <Row style={{paddingLeft:'1rem'}}>
               <h3>{this.state.name}</h3>
             </Row>
-            <Row>
+            <Row style={{paddingLeft:'1rem'}}>
               <Image src={process.env.PUBLIC_URL +`yellowStar.png`} style={{width: '20px', height:'20px'}}fluid />
               <Image src={process.env.PUBLIC_URL +`yellowStar.png`} style={{width: '20px', height:'20px'}}fluid />
               <Image src={process.env.PUBLIC_URL +`yellowStar.png`} style={{width: '20px', height:'20px'}}fluid />
               <Image src={process.env.PUBLIC_URL +`yellowStar.png`} style={{width: '20px', height:'20px'}}fluid />
             </Row>
-            <Row>
+            <Row style={{paddingLeft:'1rem'}}>
               <p>{this.state.description}</p>
             </Row>
             <ListGroup variant="flush">
@@ -60,7 +60,7 @@ class Supplier extends Component {
               </ListGroup.Item>
             </ListGroup>
             <div style={{textAlign:'center'}}>
-            <Row style={{background:'black', borderRadius:'20px', width:'70%', color:'white'}}>
+            <Row style={{background:'black', borderRadius:'20px', width:'70%', color:'white', margin: '1rem auto'}}>
               <Col lg={4}>
                 <h3> {this.state.completed}</h3>
                 <p>Jobs completed</p>
