@@ -16,9 +16,6 @@ class Item extends Component {
     super(props);
 
     this.state = {
-      constructionData: {
-
-      },
       documents:['Floorplan', 'Blueprint'],
       team:[{
         name: 'Jane',
@@ -33,7 +30,7 @@ class Item extends Component {
         job: 'Project Manager',
         image: 'https://imgur.com/I80W1Q0.png'
       }],
-      "bidders": [
+      bidders: [
         { "Australian Solar Co.": { "bid": '$1,000,000.00', "rating": 4 } },
         { "Summer of Solar Inc.": { "bid": '$2,000,000.00', "rating": 2 } },
         { "Solar Boy Pty Ltd": { "bid": '$1,500,000.00', "rating": 5 } },
@@ -46,6 +43,8 @@ class Item extends Component {
 
 
   render(){
+    let averageBid = (1000000.00 + 2000000.00 + 1500000.00 + 870000.00 + 650000.00 + 1000000.00) / 6
+
     return(
       <Container>
         <Row>
@@ -162,17 +161,16 @@ class Item extends Component {
             <h3>Bids</h3>
             <Row style={{textAlign: 'center'}}>
               <Col style={{background:'turquoise', color:'white'}}>
-                <Image style={{maxWidth:'100%'}} src={process.env.PUBLIC_URL +`bestBid.png`}/>
-                $$$$
-
+                <Image style={{maxWidth:'70%'}} src={process.env.PUBLIC_URL +`bestBid.png`}/>
+                <h3>$870,000</h3>
                 <h5>Best Offer</h5>
               </Col>
               <Col style={{background:'grey', color:'white'}}>
-                <Image style={{maxWidth:'100%'}} src={process.env.PUBLIC_URL +`averageBid.png`}/>
-                $$$$
-
+                <Image style={{maxWidth:'70%'}} src={process.env.PUBLIC_URL +`averageBid.png`}/>
+                <h3>$1,170,000</h3>
                 <h5>Average Bid</h5>
               </Col>
+
 
             </Row>
             <Row>
