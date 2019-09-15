@@ -31,12 +31,32 @@ class Item extends Component {
         image: 'https://imgur.com/I80W1Q0.png'
       }],
       bidders: [
-        { "Australian Solar Co.": { "bid": '$1,000,000.00', "rating": 4 } },
-        { "Summer of Solar Inc.": { "bid": '$2,000,000.00', "rating": 2 } },
-        { "Solar Boy Pty Ltd": { "bid": '$1,500,000.00', "rating": 5 } },
-        { "XYZ Solar": { "bid": '$870,000.00', "rating": 3 } },
-        { "Simon's Solar Pty Ltd": { "bid": '$650,000.00', "rating": 1 } },
-        { "Awesome Solar Company": { "bid": '$1,000,000.00', "rating": 1 } }
+        {
+          name: "Australian Solar Co.",
+          bid: '$1,000,000.00',
+          rating: 4
+        } ,
+        {
+          name: "Summer of Solar Inc.",
+          bid: '$2,000,000.00',
+          rating: 2
+        },
+        { name: "Solar Boy Pty Ltd",
+          bid: '$1,500,000.00',
+          rating: 5
+        },
+        { name: "XYZ Solar",
+          bid: '$870,000.00',
+          rating: 3
+        },
+        { name: "Simon's Solar Pty Ltd",
+          bid: '$650,000.00',
+          rating: 1
+        },
+        { name: "Awesome Solar Company",
+          bid: '$1,000,000.00',
+          rating: 1
+        }
       ]
     }
   }
@@ -170,18 +190,27 @@ class Item extends Component {
                 <h3>$1,170,000</h3>
                 <h5>Average Bid</h5>
               </Col>
-
-
             </Row>
             <Row>
-              {Object.keys(this.state.bidders).map( b => 
-                // <div>{this.state.bidders[b]}</div>
-                // {console.log(this.state.bidders[b])}
-                // {console.log(Object.keys(this.state.bidders[b]))}
-                <div>
-                <div>{Object.keys(this.state.bidders[b])}</div>
-                </div>
-                )}
+              {
+                this.state.bidders.map( b => (
+                  <ListGroup variant="flush" style={{width:'100%'}}>
+                    <ListGroup.Item>
+                      <Row >
+                      <Col lg={8}>
+                        <Link to={'/supplier'}>
+                        {b.name}
+                        </Link>
+                      </Col>
+                      <Col lg={4}>
+                        {b.bid}
+                      </Col>
+                      </Row>
+                    </ListGroup.Item>
+                  </ListGroup>
+                ))
+              }
+
             </Row>
           </Col>
         </Row>
