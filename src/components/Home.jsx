@@ -3196,6 +3196,10 @@ class Home extends Component {
 
     } // end of constructor
 
+    handleClick = () => {
+        console.log('clicked')
+    }
+
     render() {
         return(
             <div>
@@ -3209,7 +3213,15 @@ class Home extends Component {
                     //   }
                     
                     Object.keys(this.state).map(p => 
-                    <div>
+                    <div className='items-container'>
+                        <Link to={{
+                            pathname: "/item",
+                            state: {
+                                'hello': 'bye'
+                            }
+                            }}>
+                        <button onClick={this.handleClick}>
+                        
                         <div>{p}</div>
                         <div>{this.state[p].info.budget}</div>
                         {/* {console.log(this.state[p])}
@@ -3217,6 +3229,8 @@ class Home extends Component {
                         {/* {this.state[p].map(m => 
                             <div>{m.info.budget}</div>
                         )} */}
+                        </button>
+                        </Link>
                     </div>      
                     // Object.values(this.state).map(p => 
                     // <div>
